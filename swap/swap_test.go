@@ -21,7 +21,6 @@ import (
 )
 
 func TestSwapInt(t *testing.T) {
-
 	for ti, tt := range []struct {
 		input    []int
 		expected []int
