@@ -4,5 +4,6 @@
 
 Currently the library contains:
 
-*  [Swap for integers](https://github.com/ivankovic/go-competitive/blob/master/swap/swap.go) (using pointers)
+*  [Swap for int](https://github.com/ivankovic/go-competitive/blob/master/swap/swap.go) (using pointers)
 *  [Next permutation](https://github.com/ivankovic/go-competitive/blob/master/permutation/permutation.go#L20) (in place, [Narayana's algorithm](http://en.wikipedia.org/wiki/Permutation#Generation_in_lexicographic_order))
+*  [GCD for int](https://github.com/ivankovic/go-competitive/blob/master/gcd/gcd.go#L20)
