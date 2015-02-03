@@ -59,6 +59,11 @@ func TestIsPrimeGoldens(t *testing.T) {
 		{39916801, true},
 		{16, false},
 		{39916800, false},
+		{1373651, false},
+		{9080189, true},
+		{25325999, false},
+		{4759123139, false},
+		{9994759123139, false},
 	} {
 		result := IsPrime(tt.n)
 		if result != tt.prime {
