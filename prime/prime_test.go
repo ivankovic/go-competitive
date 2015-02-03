@@ -45,3 +45,35 @@ func TestSieveUnder1000000(t *testing.T) {
 		}
 	}
 }
+
+func TestIsPrimeGoldens(t *testing.T) {
+	for ti, tt := range []struct {
+		n     int
+		prime bool
+	}{
+		{1, false},
+		{2, true},
+		{2113, true},
+		{341, false},
+		{180811, true},
+		{39916801, true},
+		{16, false},
+		{39916800, false},
+	} {
+		result := IsPrime(tt.n)
+		if result != tt.prime {
+			t.Errorf("(%d) IsPrime(%d) = %t expected %t", ti, tt.n, result, tt.prime)
+		}
+	}
+}
+
+func TestCrossIsPrimeAndSieve(t *testing.T) {
+	_, sieve := Sieve(10000)
+
+	for i, v := range sieve {
+		result := !IsPrime(i)
+		if result != v {
+			t.Errorf("Sieve[%d] = %t and NOT(IsPrime(%d)) = %t", i, v, i, result)
+		}
+	}
+}
