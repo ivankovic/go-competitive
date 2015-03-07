@@ -8,7 +8,7 @@ func Mod(x, p, n int) int {
 	case p == 1:
 		return x % n
 	case p%2 == 0:
-		return Mod((x*x)%n, p/2, n)
+		return Mod((x*x)%n, p/2, n) % n
 	}
 	return (x * Mod((x*x)%n, (p-1)/2, n)) % n
 }
